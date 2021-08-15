@@ -5,9 +5,18 @@
   justify-content: center;
 }
 
+.findContactTitle {
+  display: flex;
+  align-items: center;
+}
+
+.findContactIcon {
+  margin-left: 5px;
+}
+
 .filterInput {
-  width: 180px;
-  height: 22px;
+  width: 250px;
+  height: 25px;
   border: 1px solid black;
   font-size: 14px;
   font-style: normal;

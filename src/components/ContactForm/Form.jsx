@@ -4,6 +4,8 @@ import shortid from 'shortid';
 import styles from './Form.module.css';
 import { useDispatch } from 'react-redux';
 import actions from '../../redux/actions/contacts';
+// import { BsPersonPlusFill } from 'react-icons';
+import { BsPersonPlusFill } from 'react-icons/bs';
 
 export default function ContactForm() {
   const [name, setName] = useState('');
@@ -73,6 +75,7 @@ export default function ContactForm() {
         id={phoneInputId}
       />
       <button className={styles.addContactBtn} type="submit">
+        <BsPersonPlusFill className={styles.addUserIcon} />
         Add contact
       </button>
     </form>

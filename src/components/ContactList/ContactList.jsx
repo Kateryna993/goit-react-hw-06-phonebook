@@ -3,6 +3,7 @@ import { /* connect, */ useSelector, useDispatch } from 'react-redux';
 // import PropTypes from 'prop-types';
 import styles from './ContactList.module.css';
 import actions from '../../redux/actions/contacts';
+import { AiOutlineUserDelete } from 'react-icons/ai';
 
 const handleFilteredContacts = (contacts, filter) => {
   const normalizedFilter = filter.toLowerCase();
@@ -31,6 +32,7 @@ export default function ContactList() {
             type="button"
             onClick={() => deleteContacts(id)}
           >
+            <AiOutlineUserDelete className={styles.deleteIcon} />
             Delete
           </button>
         </li>

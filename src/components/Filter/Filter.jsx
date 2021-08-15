@@ -4,12 +4,16 @@ import styles from './Filter.module.css';
 import { /* connect, */ useSelector, useDispatch } from 'react-redux';
 import actions from '../../redux/actions/contacts';
 
+import { FcSearch } from 'react-icons/fc';
+
 const Filter = () => {
   const value = useSelector(state => state.contacts.filter);
   const dispatch = useDispatch();
   return (
     <div className={styles.filterContainer}>
-      <h3>Find contacts by name</h3>
+      <h3 className={styles.findContactTitle}>
+        Find contacts by name <FcSearch className={styles.findContactIcon} />
+      </h3>
       <input
         className={styles.filterInput}
         type="text"
